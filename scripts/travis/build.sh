@@ -1,4 +1,4 @@
 mkdir build
 cd build
-cmake ../
+cmake -DENABLE_COVERAGE=ON ..
 make -j8
