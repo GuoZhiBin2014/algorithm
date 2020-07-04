@@ -7,7 +7,9 @@ os:
   - linux
 
 before_install:
-  - ./scripts/travis/before_install.sh
+  - sudo apt-get update
+  - sudo apt-get install libgoogle-glog-dev
+#  - ./scripts/travis/before_install.sh
 script:
   - ./scripts/travis/build.sh
   - ./scripts/travis/test.sh
