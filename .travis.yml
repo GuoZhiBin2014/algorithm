@@ -1,36 +1,21 @@
 language: cpp
-
-matrix:
-  include:
-    - compiler: gcc
-      addons:
-        apt:
-          sources:
-            - ubuntu-toolchain-r-test
-          packages:
-            - g++-9
-      env:
-        - MATRIX_EVAL="CC=gcc-9 && CXX=g++-9"
-
-    - compiler: clang
-      addons:
-        apt:
-          sources:
-            - ubuntu-toolchain-r-test
-            - llvm-toolchain-bionic-8
-          packages:
-            - clang-8
-            - libstdc++-8-dev
-      env:
-        - MATRIX_EVAL="CC=clang-8 && CXX=clang++-8"
+sudo: required
+dist: bionic
+compiler:
+  - clang
+os:
+  - linux
 
 before_install:
-  - eval "${MATRIX_EVAL}"
-  - pip install --user cpp-coveralls
-...
+  - sudo apt-get update
+  - sudo apt-get install -y yasm
+  - sudo apt-get install -y libsdl2-dev
+  - wget "https://github.com/Kitware/CMake/releases/download/v3.16.2/cmake-3.16.2-Linux-x86_64.tar.gz"
+  - tar zxvf cmake-3.16.2-Linux-x86_64.tar.gz
+  - export PATH=`pwd`/cmake-3.16.2-Linux-x86_64/bin:$PATH
 
 script:
-  - mkdir _builds
-  - cd _builds
-  - cmake .. 
-  - make
+  - mkdir build
+  - cd build
+  - cmake ../
+  - make -j8
