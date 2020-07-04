@@ -8,6 +8,10 @@ os:
 
 before_install:
   - ./scripts/travis/before_install.sh
+
 script:
   - ./scripts/travis/build.sh
   - ./scripts/travis/test.sh
+
+after_success: 
+  - bash <(curl -s https://codecov.io/bash)
