@@ -1,4 +1,6 @@
-language: ruby
-rvm:
- - 2.2
- - jruby
+language: cpp
+compiler: gcc
+
+env:
+  global:
+    - NUM_THREADS=4
