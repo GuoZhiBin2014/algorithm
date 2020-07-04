@@ -17,6 +17,6 @@ script:
   - ./scripts/travis/build.sh
   - ./scripts/travis/test.sh
 
-after_success: 
-  - ./scripts/travis/get_code_cov.sh
-  - bash <(curl -s https://codecov.io/bash)
+#after_success: 
+#  - ./scripts/travis/get_code_cov.sh
+#  - bash <(curl -s https://codecov.io/bash)
