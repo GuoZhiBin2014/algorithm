@@ -1,4 +1,8 @@
-for filename in `find . | egrep '\.cpp'`; 
-do 
-  gcov-5 -n -o . $filename > /dev/null; 
-done
+# Create lcov report
+# capture coverage info
+- lcov --directory . --capture --output-file coverage.info
+# filter out system and extra files.
+# To also not include test code in coverage add them with full path to the patterns: '*/tests/*'
+- lcov --remove coverage.info '/usr/*' "${HOME}"'/.cache/*' --output-file coverage.info
+# output coverage data for debugging (optional)
+- lcov --list coverage.info

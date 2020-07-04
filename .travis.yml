@@ -6,6 +6,14 @@ compiler:
 os:
   - linux
 
+addons:
+  apt:
+    packages: lcov
+
+install:
+- mkdir -p $HOME/.cache
+- touch $HOME/.cache/mydependency.so
+
 before_install:
   - ./scripts/travis/before_install.sh
 
@@ -16,3 +24,7 @@ script:
 after_success: 
   - ./scripts/travis/get_code_cov.sh
   - bash <(curl -s https://codecov.io/bash)
+
+notifications:
+  email:
+    - guozhibin2014@163.com
