@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-10-13T08:12:38.369Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36" etag="rmWQSavhW8ndl7KU1b2Z" version="20.4.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-10-13T09:09:10.396Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36" etag="B1TmFUq_yKH19os4sw2F" version="20.4.0" type="github">
   <diagram id="tti_ZhQh_s990TyHJGqt" name="第 1 页">
     <mxGraphModel dx="1428" dy="818" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="4681" pageHeight="3300" math="0" shadow="0">
       <root>
@@ -92,6 +92,9 @@
         <mxCell id="wZFN2r-Hda0BYNomyeBZ-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;fontSize=13;fontColor=#000000;" edge="1" parent="1" source="wZFN2r-Hda0BYNomyeBZ-47" target="wZFN2r-Hda0BYNomyeBZ-49">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="wZFN2r-Hda0BYNomyeBZ-156" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=#000000;fontSize=13;fontColor=#000000;" edge="1" parent="1" source="wZFN2r-Hda0BYNomyeBZ-47" target="wZFN2r-Hda0BYNomyeBZ-155">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="wZFN2r-Hda0BYNomyeBZ-47" value="分析问题原因" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;" vertex="1" parent="1">
           <mxGeometry x="362.5" y="880" width="135" height="30" as="geometry" />
         </mxCell>
@@ -114,7 +117,7 @@
           <mxGeometry x="810" y="861.25" width="370" height="67.5" as="geometry" />
         </mxCell>
         <mxCell id="wZFN2r-Hda0BYNomyeBZ-99" value="loadStr: size= 3; seg = 384; dst_str = 64; src_str = 3" style="swimlane;labelBackgroundColor=#FFFFFF;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="544" y="1010" width="770" height="380" as="geometry">
+          <mxGeometry x="544" y="1010" width="786" height="440" as="geometry">
             <mxRectangle x="1270" y="870" width="360" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
@@ -380,6 +383,9 @@
         <mxCell id="wZFN2r-Hda0BYNomyeBZ-130" value="dst_str = 64" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=13;fontColor=#000000;" vertex="1" parent="wZFN2r-Hda0BYNomyeBZ-99">
           <mxGeometry x="126" y="289" width="90" height="30" as="geometry" />
         </mxCell>
+        <mxCell id="wZFN2r-Hda0BYNomyeBZ-165" value="&lt;div&gt;LoadStr，小c性能炸裂。&lt;span style=&quot;background-color: initial;&quot;&gt;其次大量循环，每次只算1*1*co大小的输出，指令很多，且每条指令时间太短，小于启动开销。&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=13;fontColor=#000000;" vertex="1" parent="wZFN2r-Hda0BYNomyeBZ-99">
+          <mxGeometry x="25.75" y="390" width="710" height="30" as="geometry" />
+        </mxCell>
         <mxCell id="wZFN2r-Hda0BYNomyeBZ-120" value="" style="group" vertex="1" connectable="0" parent="1">
           <mxGeometry x="767" y="1090" width="135" height="47" as="geometry" />
         </mxCell>
@@ -394,6 +400,56 @@
             <mxPoint x="1100" y="1080" as="sourcePoint" />
             <mxPoint x="1150" y="1030" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="wZFN2r-Hda0BYNomyeBZ-166" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.001;entryY=0.162;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#000000;fontSize=13;fontColor=#000000;" edge="1" parent="1" source="wZFN2r-Hda0BYNomyeBZ-155" target="wZFN2r-Hda0BYNomyeBZ-159">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wZFN2r-Hda0BYNomyeBZ-169" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=#000000;fontSize=13;fontColor=#000000;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="wZFN2r-Hda0BYNomyeBZ-155" target="wZFN2r-Hda0BYNomyeBZ-167">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="429.89473684210543" y="1760" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wZFN2r-Hda0BYNomyeBZ-155" value="提出优化方案" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="362.5" y="1571" width="135" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wZFN2r-Hda0BYNomyeBZ-157" value="优化项" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;labelBackgroundColor=#FFFFFF;strokeColor=#0000FF;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="554" y="1539" width="426" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="wZFN2r-Hda0BYNomyeBZ-159" value="1.fp16的dwConv转int16计算的Conv,融入TFU，利用smallCiCo优化。&#xa;　　a.修改dwConv为conv算子&#xa;　　b.重新配置量化参数&#xa;       c. Conv算子进入TFU&#xa;       d. 多分支Conv合并" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;labelBackgroundColor=#FFFFFF;fontSize=13;fontColor=#000000;" vertex="1" parent="wZFN2r-Hda0BYNomyeBZ-157">
+          <mxGeometry y="30" width="426" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="wZFN2r-Hda0BYNomyeBZ-160" value="2.重构Depthwise Conv算子" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;labelBackgroundColor=#FFFFFF;fontSize=13;fontColor=#000000;fontStyle=0" vertex="1" parent="wZFN2r-Hda0BYNomyeBZ-157">
+          <mxGeometry y="140" width="426" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wZFN2r-Hda0BYNomyeBZ-167" value="确认修复方案2" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="362.5" y="1750" width="135" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wZFN2r-Hda0BYNomyeBZ-170" value="&lt;span style=&quot;color: rgb(23, 43, 77); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; text-align: start;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;方案1:转int16计算，可能会有精度差，需要大量测试。依赖框架修改，pytorch、tf不改的话依然性能不佳。&lt;/font&gt;&lt;/span&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;labelBackgroundColor=#FFFFFF;strokeColor=#0000FF;fontSize=13;fontColor=#000000;size=30;position=0.08;position2=0;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="1510" width="260" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="wZFN2r-Hda0BYNomyeBZ-180" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;fontFamily=Helvetica;fontSize=14;fontColor=#000000;" edge="1" parent="1" source="wZFN2r-Hda0BYNomyeBZ-173" target="wZFN2r-Hda0BYNomyeBZ-179">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wZFN2r-Hda0BYNomyeBZ-173" value="算子开发与测试" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="362" y="1870" width="135" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wZFN2r-Hda0BYNomyeBZ-174" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#000000;fontSize=12;fontColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="wZFN2r-Hda0BYNomyeBZ-167" target="wZFN2r-Hda0BYNomyeBZ-173">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="500" y="2180" as="sourcePoint" />
+            <mxPoint x="550" y="2130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wZFN2r-Hda0BYNomyeBZ-175" value="" style="endArrow=classic;html=1;rounded=0;dashed=1;strokeColor=#000000;fontSize=12;fontColor=#000000;entryX=1;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="wZFN2r-Hda0BYNomyeBZ-170" target="wZFN2r-Hda0BYNomyeBZ-167">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1110" y="1730" as="sourcePoint" />
+            <mxPoint x="1210" y="1710" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1140" y="1765" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wZFN2r-Hda0BYNomyeBZ-179" value="Done" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=#FFFFFF;strokeColor=#0000FF;fontFamily=Helvetica;fontSize=14;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="370" y="1960" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
